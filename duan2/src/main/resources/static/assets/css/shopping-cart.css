@@ -1,0 +1,16 @@
+.poly-item img{
+    height: 150px;
+    max-width: 95%;
+}
+
+.poly-item .title{
+    font-size: smaller;
+    color: white;
+}
+
+.poly-item .card-header{
+	background-color: #057eff;
+}
+.poly-item-detail img{
+    max-width: 80%;
+}

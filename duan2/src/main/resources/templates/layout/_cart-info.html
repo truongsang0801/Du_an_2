@@ -1,0 +1,8 @@
+<div xmlns:th="http://www.thymeleaf.org">
+  <div class="card">
+    <div class="card-body text-center border border-danger rounded">
+      <i class="fas fa-cart-arrow-down" style="font-size: 30px; color: red"></i>
+      <a th:href="@{/cart/view}">{{cart.count}} items x ${{cart.amount | number:2}}</a><!-- number là để định dạng lấy 2 số sau thập phân -->
+    </div>
+  </div>
+</div>

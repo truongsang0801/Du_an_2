@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        th:fragment = "dynamic(main)">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/shopping-cart.css">
+</head>
+<body class="container" ng-app="shopping-cart-app" ng-controller="shopping-cart-ctrl">
+    <header class="row alert alert-success">
+        <h1>fpt polytechnic</h1>
+    </header>
+    <nav class="row card">
+        <div th:replace = "/layout/_menu.html"></div>
+    </nav>
+    <div class="row">
+        <!--các nội dung được thay thế ở đây-->
+        <article class="col-sm-9">
+            <div th:replace = "${main}"></div>
+        </article>
+        <aside class="col-sm-3">
+            <br>
+            <div th:replace = "/layout/_cart-info.html"></div>
+            <br>
+            <div th:replace = "/layout/_category.html"></div>
+        </aside>
+    </div>
+    <footer class="row card-footer">
+        Fpt Polytechnic
+    </footer>
+    <script src="/assets/js/shopping-cart-app.js"></script>
+</body>
+</html>
